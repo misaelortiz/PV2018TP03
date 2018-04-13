@@ -16,12 +16,13 @@ public class TestPunto {
         double dato2;
         System.out.println("Ingrese y: ");
         dato2 = scanner.nextDouble();
-        unPunto.ObtenerDistancia(2.3, 3.1);
+        //unPunto.ObtenerDistancia(2.3, 3.1);
         
        
      
         
-    }
+    }3
+    
     
     
 }
