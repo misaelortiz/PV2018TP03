@@ -15,7 +15,9 @@ public class Punto {
     private double objeto2;
 
 
-    
+     public Punto(){
+        
+    }
    /**
      * @return the objeto1
      */
@@ -42,6 +44,9 @@ public class Punto {
      */
     public void setObjeto2(double objeto2) {
         this.objeto2 = objeto2;
+    }
+    public double calcularDistanciaEntrePuntos(Punto otroPunto){
+        return Math.sqrt(Math.pow(otroPunto.getObjeto1()-objeto1, 2) + Math.pow(otroPunto.getObjeto2()-objeto2, 2));
     }
     
     
