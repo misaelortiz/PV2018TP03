@@ -20,8 +20,8 @@ public class TestPunto5 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Circulo c1 = new Circulo(3.4, "Rojo");
-        Circulo c2 = new Circulo(5.4, "Verde");
+        Circulo c1 = new Circulo(3.4, "Azul");
+        Circulo c2 = new Circulo(5.4, "Rojo");
         
         GestorCirculos gc = new GestorCirculos();
         gc.agregarCirculo(c1);
