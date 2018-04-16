@@ -56,11 +56,14 @@ public class Coche {
         this.combustible = combustible;
     }
     
-    public void mostrarAutos(Coche autos){
-        System.out.println("Marca: " + autos.marca);
-        System.out.println("Modelo: " + autos.modelo);
-        System.out.println("Color: " + autos.color);
-        System.out.println("Combustible: " + autos.combustible);
-        System.out.println("Patente: " + autos.patente);
-    }
+    
+    
+    public void mostrarAutos(Coche[] autos){
+        for (int i=0; i<autos.length;i++){
+        System.out.println("Marca: " + autos[i].marca);
+        System.out.println("Modelo: " + autos[i].modelo);
+        System.out.println("Color: " + autos[i].color);
+        System.out.println("Combustible: " + autos[i].combustible);
+        System.out.println("Patente: " + autos[i].patente);
+    }}
 }
