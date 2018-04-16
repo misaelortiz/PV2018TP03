@@ -10,37 +10,40 @@ package tp3.punto2;
  * @author E. Misael Ortiz
  */
 public class Rectangulo {
-    private double puntox;
-    private double puntoy;
+    private double puntox1;
+    private double puntoy1;
     private double base;
     private double altura;
 
+    public Rectangulo() {
+      
+    }
     /**
      * @return the puntox
      */
-    public double getPuntox() {
-        return puntox;
+    public double getPuntox1() {
+        return puntox1;
     }
 
     /**
      * @param puntox the puntox to set
      */
-    public void setPuntox(double puntox) {
-        this.puntox = puntox;
+    public void setPuntox1(double puntox1) {
+        this.puntox1 = puntox1;
     }
 
     /**
      * @return the puntoy
      */
-    public double getPuntoy() {
-        return puntoy;
+    public double getPuntoy1() {
+        return puntoy1;
     }
 
     /**
      * @param puntoy the puntoy to set
      */
-    public void setPuntoy(double puntoy) {
-        this.puntoy = puntoy;
+    public void setPuntoy1(double puntoy1) {
+        this.puntoy1 = puntoy1;
     }
 
     /**
@@ -70,4 +73,8 @@ public class Rectangulo {
     public void setAltura(double altura) {
         this.altura = altura;
     }
+    
+    
+    
+    
 }
