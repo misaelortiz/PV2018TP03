@@ -60,10 +60,10 @@ public class Coche {
     
     public void mostrarAutos(Coche[] autos){
         for (int i=0; i<autos.length;i++){
-        System.out.println("Marca: " + autos[i].marca);
-        System.out.println("Modelo: " + autos[i].modelo);
-        System.out.println("Color: " + autos[i].color);
-        System.out.println("Combustible: " + autos[i].combustible);
-        System.out.println("Patente: " + autos[i].patente);
+        System.out.println("Marca: " + autos[i].getMarca());
+        System.out.println("Modelo: " + autos[i].getModelo());
+        System.out.println("Color: " + autos[i].getColor());
+        System.out.println("Combustible: " + autos[i].getCombustible());
+        System.out.println("Patente: " + autos[i].getPatente());
     }}
 }
