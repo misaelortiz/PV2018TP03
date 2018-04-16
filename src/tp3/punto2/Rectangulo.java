@@ -26,7 +26,7 @@ public class Rectangulo {
     }
 
     /**
-     * @param puntox the puntox to set
+     * @param puntox1 the puntox to set
      */
     public void setPuntox1(double puntox1) {
         this.puntox1 = puntox1;
@@ -40,7 +40,7 @@ public class Rectangulo {
     }
 
     /**
-     * @param puntoy the puntoy to set
+     * @param puntoy1 the puntoy to set
      */
     public void setPuntoy1(double puntoy1) {
         this.puntoy1 = puntoy1;
@@ -75,6 +75,51 @@ public class Rectangulo {
     }
     
     
+    public double ObtenerDiagonal(double base,double altura){
+            
+        return Math.sqrt(Math.pow(base, 2) + Math.pow(altura, 2));
+       
     
+    }
     
+    public void ObtenerVertice2 (Rectangulo puntox,Rectangulo puntoy, Rectangulo altura){
+     double x2;
+     double y2;
+     x2= puntox.getPuntox1();
+     y2= altura.getAltura() - puntoy.getPuntoy1();
+    
+        System.out.println("Vertice2= x: " + x2 + " y: " + y2 );
+    }
+    public void ObtenerVertice3 (Rectangulo puntox, Rectangulo puntoy, Rectangulo base, Rectangulo altura){
+        double puntox3;
+        double puntoy3;
+        puntox3 = puntox.getPuntox1() + (base.getBase()-1);
+        puntoy3 = altura.getAltura() - puntoy.getPuntoy1();
+        
+        System.out.println("Vertice3= x: " + puntox3 + " y: " + puntoy3);
+        
+    }
+    
+    public void ObtenerVertice4 (Rectangulo puntoy,Rectangulo puntox, Rectangulo base){
+       double x4;
+     double y4;
+     x4= puntox.getPuntox1()+(base.getBase()-1);
+     y4= puntoy.getPuntoy1();
+    
+        System.out.println("Vertice4= x: " + x4 + " y: " + y4 );
+    
+    }
+    
+    public double ObtenerSuperficie(Rectangulo b, Rectangulo h){
+        return b.getBase()*h.getAltura();
+    
+    }
+    
+    public double ObtenerPerimetro(Rectangulo b, Rectangulo h){
+     
+        return (2*(b.getBase())+2*(h.getAltura()));
+    
+    }
+
+        
 }
