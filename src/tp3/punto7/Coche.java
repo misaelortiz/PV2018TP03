@@ -56,4 +56,11 @@ public class Coche {
         this.combustible = combustible;
     }
     
+    public void mostrarAutos(Coche autos){
+        System.out.println("Marca: " + autos.marca);
+        System.out.println("Modelo: " + autos.modelo);
+        System.out.println("Color: " + autos.color);
+        System.out.println("Combustible: " + autos.combustible);
+        System.out.println("Patente: " + autos.patente);
+    }
 }
