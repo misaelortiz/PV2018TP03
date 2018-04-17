@@ -51,7 +51,7 @@ public class TestBusqueda {
        /*Metodo para mostrar el ArrayList */
         //libro1.visualizarLibros(libros);
        
-        System.out.println("Que libro desea buscar? Ingrese un titulo");
+        System.out.println("Que libro desea buscar? Por favor ingrese un titulo");
         String buscado;
         buscado=sc.next();
         
@@ -61,7 +61,7 @@ public class TestBusqueda {
         */
         
         
-        for(int i = 0 ; i < libros.size();i++) {
+        for(int i = 0 ; i < libros.size(); i++) {
             if(libros.get(i).getTitulo().equals(buscado)==true) {
                 //System.out.println("Si existe");
                 System.out.println("ISBN: " + libros.get(i).getIsbn());
