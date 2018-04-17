@@ -10,7 +10,7 @@ package tp3.punto8.modelo;
  * @author E. Misael Ortiz
  */
 public class Libro {
-    private int isbn;
+    private long isbn;
 
     public Libro() {
     }
@@ -21,14 +21,14 @@ public class Libro {
     /**
      * @return the isbn
      */
-    public int getIsbn() {
+    public long getIsbn() {
         return isbn;
     }
 
     /**
      * @param isbn the isbn to set
      */
-    public void setIsbn(int isbn) {
+    public void setIsbn(long isbn) {
         this.isbn = isbn;
     }
 
