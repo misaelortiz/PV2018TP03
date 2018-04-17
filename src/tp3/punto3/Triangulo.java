@@ -58,7 +58,10 @@ public class Triangulo {
     public void setLado3(double lado3) {
         this.lado3 = lado3;
     }
-    
+    /* Este metodo nos dice si los 3 lados ingresados forman o no un triangulo
+     * Si se logra formar un triangulo, se realiza el perimetro del mismo.
+     * Si no , muestra un mensaje.    
+    */    
     public void ResolverTriangulo(Triangulo a,Triangulo b, Triangulo c){
         double p;
         if (a.getLado1() + b.getLado2() > c.getLado3() )
