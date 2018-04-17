@@ -26,12 +26,12 @@ public class GestorLibros {
         this.libros = libros;
     }
     
-    public void agregarLibro(Libro libro){
+    public void agregarLibro(Libro a, Libro b, Libro c, Libro d){
         
-        this.libros.add(libro);
-        //this.libros.add(t);
-        //this.libros.add(a);
-        //this.libros.add(p);
+        this.libros.add(a);
+        this.libros.add(b);
+        this.libros.add(c);
+        this.libros.add(d);
         
     }
     
