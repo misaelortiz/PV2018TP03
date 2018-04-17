@@ -74,14 +74,15 @@ public class Rectangulo {
         this.altura = altura;
     }
     
-    
+    /* Metodo para obtener la diagonal del rectangulo */    
+    /* Hice este metodo por si lo necesitaba mas adelante */    
     public double ObtenerDiagonal(double base,double altura){
             
         return Math.sqrt(Math.pow(base, 2) + Math.pow(altura, 2));
        
     
     }
-    
+    /* Metodo para obtener el segundo vertice de dicho rectangulo */    
     public void ObtenerVertice2 (Rectangulo puntox,Rectangulo puntoy, Rectangulo altura){
      double x2;
      double y2;
@@ -90,6 +91,7 @@ public class Rectangulo {
     
         System.out.println("Vertice2= x: " + x2 + " y: " + y2 );
     }
+    /* Metodo para obtener el tercer vertice de dicho rectangulo */    
     public void ObtenerVertice3 (Rectangulo puntox, Rectangulo puntoy, Rectangulo base, Rectangulo altura){
         double puntox3;
         double puntoy3;
@@ -99,7 +101,7 @@ public class Rectangulo {
         System.out.println("Vertice3= x: " + puntox3 + " y: " + puntoy3);
         
     }
-    
+    /* Metodo para obtener el cuatro vertice de dicho rectangulo */    
     public void ObtenerVertice4 (Rectangulo puntoy,Rectangulo puntox, Rectangulo base){
        double x4;
      double y4;
@@ -109,12 +111,12 @@ public class Rectangulo {
         System.out.println("Vertice4= x: " + x4 + " y: " + y4 );
     
     }
-    
+    /* Metodo para obtener la superficie del rectangulo */    
     public double ObtenerSuperficie(Rectangulo b, Rectangulo h){
         return b.getBase()*h.getAltura();
     
     }
-    
+    /* Metodo para obtener el perimetro del rectangulo */    
     public double ObtenerPerimetro(Rectangulo b, Rectangulo h){
      
         return (2*(b.getBase())+2*(h.getAltura()));
