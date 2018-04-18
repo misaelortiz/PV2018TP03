@@ -34,6 +34,7 @@ public class Principal {
                 
                         }break;
                 case 2: {
+                    /**Muestra las categorias que hay*/
                     System.out.println("Categorias:");
                     for(int i = 0 ; i < categoria.size(); i++) {    
                      System.out.println(categoria.get(i).getTipo());
@@ -54,6 +55,7 @@ public class Principal {
                 libro.add(unLibro);
                 }break;
                 case 4:{
+                /**Muestra los libros registrados*/    
                 for(int i = 0 ; i < libro.size(); i++) {           
                        System.out.println("Titulo: " + libro.get(i).getTitulo());
                        System.out.println("Categoria: " + libro.get(i).getCategoria());
@@ -64,10 +66,70 @@ public class Principal {
                         } 
                 
                 }break;
-                
-                
-        }
-       }while(resp!=6);
+                case 5:{
+                    String buscado1;
+                    String op1;
+                    System.out.println("Desea realizar la busqueda por autor?");
+                    op1=sc.next();
+                    
+                    if(op1.equals("si")){
+                        System.out.println("Ingrese nombre de autor");
+                        buscado1=sc.next();
+                     /**Busqueda por autor...*/
+                        for(int i = 0 ; i < libro.size() ; i++) {
+                          if(libro.get(i).getAutor().equals(buscado1)==true)
+                          {
+                              System.out.println("Titulo:  " + libro.get(i).getTitulo());
+                              System.out.println("Editorial:  "+ libro.get(i).getEditorial());
+                              System.out.println("Isbn:  "+libro.get(i).getIsbn());
+                              System.out.println("Categoria:  "+libro.get(i).getCategoria());
+                          }  
+                       
+                       }
+                    }
+                    else{
+                       String op2;
+                       String buscado2;
+                       if (op1.equals("no")){
+                           System.out.println("Desea realizar busqueda por titulo?");
+                           op2=sc.next();
+                           if(op2.equals("si")){
+                               System.out.println("Ingrese titulo del libro que busca");
+                                buscado2=sc.next();
+                                /**Busqueda por titulo de libro*/
+                                for(int i = 0 ; i < libro.size() ; i++) {
+                                
+                                if(libro.get(i).getTitulo().equals(buscado2)==true)
+                                {
+                                System.out.println("Autor:  " + libro.get(i).getAutor());
+                                System.out.println("Editorial: "+ libro.get(i).getEditorial());
+                                System.out.println("Isbn:  "+libro.get(i).getIsbn());
+                                System.out.println("Categoria:  "+libro.get(i).getCategoria());
+                                }  
+                                
+                                }
+                            }
+                            else{
+                                    String buscado3;
+                                    System.out.println("Ingrese tipo de categoria");
+                                    buscado3=sc.next();
+                                 /**Busqueda por categoria*/   
+                                for(int i = 0 ; i < categoria.size() ; i++) {
+                                
+                                if(categoria.get(i).getTipo().equals(buscado3)==true)
+                                {
+                                System.out.println("Autor:  " + libro.get(i).getAutor());
+                                System.out.println("Editorial:  "+ libro.get(i).getEditorial());
+                                System.out.println("Isbn:  " +libro.get(i).getIsbn());
+                                System.out.println("Titulo:  " +libro.get(i).getTitulo());
+                                }  
+                           }
+                           }   
+                     }
+                } 
+           }   
+         }
+      }while(resp!=6);
 
     }
    
