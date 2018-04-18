@@ -16,31 +16,34 @@ public class Principal {
         ArrayList<Zapatilla> zapatilla = new ArrayList<Zapatilla>();
         Scanner sc = new Scanner(System.in);
         String opc = new String();
-        Zapatilla unaZapatilla = new Zapatilla();
-        System.out.println("Elija una opcion: ");
-        System.out.println("1-Agregar zapatilla:");
-        System.out.println("2-Mostrar zapatillas:");
-        int op=sc.nextInt();
-        if(op==1){
-            boolean bandera=true;
-            while(bandera==true){
-        //unaZapatilla.setMarca(unaZapatilla.registrarZapatillas());
-        zapatilla.add(unaZapatilla.registrarZapatillas(unaZapatilla));
-        for (int i=0; i<zapatilla.size();i++){
-            System.out.println("El elemento de la lista es: "+ zapatilla.get(i).getMarca());
-            if(zapatilla.get(i).isEsOriginal()==true){
-            System.out.println("Es original");
-        }
-            else{
-                System.out.println("No es original");
-            }}
-                System.out.println("¿Seguir ingresando zapatillas?");
-                opc=sc.next();
-                if(opc=="no"){
-                    bandera=false;
-                }
-        }
-        }
+        Zapatilla zapa=new Zapatilla();
+        Zapatilla marca=new Zapatilla();
+        Zapatilla ori = new Zapatilla();
+        int resp;
+        do{ 
+            int op=0;
+            resp=zapa.MenuRegistro(op);
+            
+            switch(resp){
+                case 1: {System.out.println("Ingrese marca de zapatilla:");                
+                marca.setMarca(sc.next());
+                zapatilla.add(marca);         
+                System.out.println("¿Es original?");
+                ori.setOriginal(sc.next());
+                zapatilla.add(ori); 
+                }break;
+                case 2:  {
+                    
+                zapa.visualizarZapatillas(zapatilla);
+                
+                }break;
+                
+                case 3: System.out.println("Fin del registro");
+                 
+            }
+        }while(resp!=3);
+        
+       
     }
     
     
