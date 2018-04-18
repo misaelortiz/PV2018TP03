@@ -6,6 +6,7 @@
 package tp3.punto8.utils;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import tp3.punto8.modelo.Libro;
 
 /**
@@ -26,13 +27,20 @@ public class GestorLibros {
         this.libros = libros;
     }
     
-    public void agregarLibro(Libro a, Libro b, Libro c, Libro d){
+    public void agregarLibro(Libro a){
         
         this.libros.add(a);
-        this.libros.add(b);
-        this.libros.add(c);
-        this.libros.add(d);
+       
         
     }
-    
+    public  int MenuRegistro (int a){
+        int op;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Elija una opcion: ");
+        System.out.println("1-Registrar libro");
+        System.out.println("2- Salir");
+        
+        op=sc.nextInt();
+        return op;
+   }
 }
