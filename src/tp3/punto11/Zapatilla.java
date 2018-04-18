@@ -12,8 +12,10 @@ import java.util.ArrayList;
  */
 public class Zapatilla {
     private String marca;
-    private boolean esOriginal;
+    private String original;
 
+   
+    
     /**
      * @return the marca
      */
@@ -29,36 +31,48 @@ public class Zapatilla {
     }
 
     /**
-     * @return the esOriginal
-    */ 
-    public boolean isEsOriginal() {
-        return esOriginal;
+     * @return the original
+     */
+    public String getOriginal() {
+        return original;
     }
 
     /**
-     * @param esOriginal the esOriginal to set
-    */
-    public void setEsOriginal(boolean esOriginal) {
-        this.esOriginal = esOriginal;
+     * @param original the original to set
+     */
+    public void setOriginal(String original) {
+        this.original = original;
     }
     
     
-    public Zapatilla registrarZapatillas(Zapatilla zap){
+    
+    public void RegistrarZapatillas(int op){
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese marca de zapatilla:");
         setMarca(sc.next());
         System.out.println("¿Es original?");
-        String op = new String();
-        op=sc.next();
-        if(op=="si"){
-        zap.setEsOriginal(true);}
-        else{
-        if(op=="no"){
-        zap.setEsOriginal(false);}        
-        }
-                
-        zap.setMarca(getMarca());
-        return zap;
-        //return marca;
+        setOriginal(sc.next());
+        
     }
-}
+    
+    public void visualizarZapatillas(ArrayList<Zapatilla> zapatillas){
+        for(int i=0; i<zapatillas.size(); i++){
+            System.out.println("Marca : "+ zapatillas.get(i).getMarca());
+            System.out.println("Original : "+zapatillas.get(i).getOriginal());
+            
+    }
+    }
+    
+    
+   public  int MenuRegistro (int a){
+        int op;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Elija una opcion: ");
+        System.out.println("1-Agregar zapatilla:");
+        System.out.println("2-Mostrar zapatillas:");
+        System.out.println("3-Salir");
+        op=sc.nextInt();
+        return op;
+   }
+    }
+
